@@ -25,7 +25,7 @@ export default function ProjectExplorer() {
     <section id="project-explorer" className="max-w-6xl mx-auto px-6 py-16">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
         <div>
-          <h2 className="font-display text-3xl md:text-4xl text-[#F7F9FC] mb-1">Project Explorer</h2>
+          <h2 className="font-display text-3xl md:text-4xl text-[#F5F7FA] mb-1">Project Explorer</h2>
           <p className="text-[#6B7888] text-sm">Search, filter, and explore the portfolio.</p>
         </div>
         <div className="flex items-center gap-2 relative max-w-sm w-full md:w-auto">
@@ -35,10 +35,10 @@ export default function ProjectExplorer() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search projects..."
-            className="w-full md:w-72 pl-9 pr-9 py-2.5 rounded-xl bg-[#121A2A]/60 border border-white/[0.08] text-sm text-[#F7F9FC] placeholder:text-[#6B7888] focus:outline-none focus:border-[#3B82F6]/40 transition-colors"
+            className="w-full md:w-72 pl-9 pr-9 py-2.5 rounded-xl bg-[#121A2A]/60 border border-white/[0.08] text-sm text-[#F5F7FA] placeholder:text-[#6B7888] focus:outline-none focus:border-[#3B82F6]/40 transition-colors"
           />
           {query && (
-            <button onClick={() => setQuery('')} className="absolute right-3 text-[#6B7888] hover:text-[#F7F9FC]" aria-label="Clear search"><X size={14} /></button>
+            <button onClick={() => setQuery('')} className="absolute right-3 text-[#6B7888] hover:text-[#F5F7FA]" aria-label="Clear search"><X size={14} /></button>
           )}
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function ProjectExplorer() {
             className={`text-xs px-3.5 py-1.5 rounded-full border transition-all whitespace-nowrap ${
               categoryFilter === cat
                 ? 'bg-[#3B82F6]/10 text-[#60A5FA] border-[#3B82F6]/30'
-                : 'bg-white/[0.03] text-[#A7B1C2] border-white/[0.08] hover:border-white/[0.16] hover:text-[#F7F9FC]'
+                : 'bg-white/[0.03] text-[#A7B1C2] border-white/[0.08] hover:border-white/[0.16] hover:text-[#F5F7FA]'
             }`}
           >
             {cat}
@@ -66,7 +66,7 @@ export default function ProjectExplorer() {
               <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#3B82F6]/10 text-[#60A5FA] border border-[#3B82F6]/15">{p.category}</span>
               <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${p.status === 'Live' ? 'bg-emerald-400/10 text-emerald-300 border-emerald-400/20' : 'bg-amber-400/10 text-amber-300 border-amber-400/20'}`}>{p.status}</span>
             </div>
-            <h3 className="font-display text-lg text-[#F7F9FC] mb-2">{p.title}</h3>
+            <h3 className="font-display text-lg text-[#F5F7FA] mb-2">{p.title}</h3>
             <p className="text-[#A7B1C2] text-sm mb-4">{p.tagline}</p>
             <div className="flex flex-wrap gap-1.5 mb-4">
               {p.stack.slice(0, 3).map((s) => (

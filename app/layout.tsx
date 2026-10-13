@@ -5,6 +5,8 @@ import { ThemeProvider } from '@/components/ui/theme-provider';
 import Navigation from '@/components/layout/navigation';
 import Footer from '@/components/layout/footer';
 import CommandPalette from '@/components/ui/command-palette';
+import AnimatedBackground from '@/components/ui/particle-background';
+import WireframeGeometry from '@/components/ui/wireframe-geometry';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,6 +44,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${jetbrains.variable} ${instrumentSerif.variable}`}>
         <ThemeProvider>
+          <AnimatedBackground />
+          <WireframeGeometry />
           <Navigation />
           <main>{children}</main>
           <Footer />

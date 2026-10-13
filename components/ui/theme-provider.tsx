@@ -55,7 +55,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const setTheme = (t: Theme) => setThemeState(t);
 
   if (!mounted) {
-    return <div className="min-h-screen bg-[#080A0F] text-[#F7F9FC]" />;
+    return <div className="min-h-screen bg-[#080A0F] text-[#F5F7FA]" />;
   }
 
   return (

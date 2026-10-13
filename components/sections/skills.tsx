@@ -2,14 +2,14 @@ import { skills } from '@/data/skills';
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-6xl mx-auto px-6 py-20">
+    <section id="skills" className="max-w-6xl mx-auto px-6 py-14">
       <div className="mb-12">
-        <h2 className="font-display text-3xl md:text-4xl text-[#F7F9FC] mb-3">Skills & Tools</h2>
+        <h2 className="font-display text-3xl md:text-4xl text-[#F5F7FA] mb-3">Skills & Tools</h2>
         <p className="text-[#A7B1C2] text-sm max-w-lg">Categorized technologies used across projects — without arbitrary percentages or progress bars.</p>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {skills.map((cat) => (
-          <div key={cat.title} className="rounded-3xl border border-white/[0.08] bg-[#121A2A]/40 backdrop-blur-md p-6 hover:border-white/[0.14] transition-colors">
+          <div key={cat.title} className="rounded-3xl border border-white/[0.08] bg-[#0F131A]/40 backdrop-blur-md p-5 hover:border-white/[0.12] transition-colors">
             <h3 className="text-xs font-mono text-[#6B7888] uppercase tracking-wider mb-4">{cat.title}</h3>
             <div className="flex flex-wrap gap-2">
               {cat.items.map((item) => (

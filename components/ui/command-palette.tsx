@@ -107,7 +107,7 @@ export default function CommandPalette() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-[#121A2A]/90 border border-white/[0.10] text-sm text-[#A7B1C2] shadow-2xl backdrop-blur-xl hover:text-[#F7F9FC] hover:border-white/[0.20] transition-all"
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-[#121A2A]/90 border border-white/[0.10] text-sm text-[#A7B1C2] shadow-2xl backdrop-blur-xl hover:text-[#F5F7FA] hover:border-white/[0.20] transition-all"
         aria-label="Open command palette (Ctrl+K)"
       >
         <Command size={14} /> <span className="hidden sm:inline">Command</span>
@@ -127,9 +127,9 @@ export default function CommandPalette() {
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Search commands..."
-                className="flex-1 bg-transparent text-sm text-[#F7F9FC] placeholder:text-[#6B7888] outline-none"
+                className="flex-1 bg-transparent text-sm text-[#F5F7FA] placeholder:text-[#6B7888] outline-none"
               />
-              <button onClick={() => setOpen(false)} className="text-[#6B7888] hover:text-[#F7F9FC]" aria-label="Close"><X size={16} /></button>
+              <button onClick={() => setOpen(false)} className="text-[#6B7888] hover:text-[#F5F7FA]" aria-label="Close"><X size={16} /></button>
             </div>
             <div className="max-h-[50vh] overflow-y-auto">
               {filtered.length === 0 ? (
@@ -141,7 +141,7 @@ export default function CommandPalette() {
                     onClick={() => cmd.action()}
                     onMouseEnter={() => setSelectedIndex(idx)}
                     className={`w-full text-left px-4 py-2.5 flex items-center gap-3 text-sm transition-colors ${
-                      idx === selectedIndex ? 'bg-[#3B82F6]/10 text-[#F7F9FC]' : 'text-[#A7B1C2] hover:bg-white/[0.03] hover:text-[#F7F9FC]'
+                      idx === selectedIndex ? 'bg-[#3B82F6]/10 text-[#F5F7FA]' : 'text-[#A7B1C2] hover:bg-white/[0.03] hover:text-[#F5F7FA]'
                     }`}
                   >
                     <span className="text-[#6B7888]">{cmd.icon}</span>
